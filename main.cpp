@@ -4,11 +4,11 @@
 
 int main(/*int ac, char** av*/)
 {
-	float valueA;
+	/*float valueA;
 	float valueB;
 	int action;
 	float result;
-	/*int ecrit;
+	int ecrit;
 	//this is how you can output something ont the console !
 	std::cout << "Hello world!";
 	std:: cout << " ";
@@ -35,7 +35,7 @@ int main(/*int ac, char** av*/)
 	std::cout << c << "\n";
 	c = a - c * b;
 	std::cout << c << "\n";
-	return c;*/
+	return c;
 
 	std::cout << "Hello, please write the first number.\n";
 	std::cin >> valueA;
@@ -92,6 +92,33 @@ int main(/*int ac, char** av*/)
 	// std::cout << "Enter your last_name.";
 	std::string name;
 	std::getline(std::cin, name);
-	std::cout << name;
+	std::cout << name;*/
+
+	// contrainte : 100 ligne, textuel.
+
+	std::string accept;
+	std::string choise;
+
+	std::cout << "Hello adventurer, i'm BOT. I'm your guide in this adventure\n";
+	std::cout << "please, writh your full name :\n";
+	std::string name;
+	std::cin >> name;
+	std::cout << "Good, good! Now adventurer " << name;
+	std::getline(std::cin, name);
+	std::cout << name << " you awake in the room larg and cool without light. you see a sheet and a armor but you can take only one. You take the sheet or the armor\n";
+	std::cin >> choise;
+	if (choise == "sheet") 
+	{
+	std::cout << "ok, you take the sheet";
+	}
+	else if (choise == "armor")
+	{
+		std::cout << "ok, you rake the armor";
+	}
+	else
+	{
+		MessageBox(nullptr, "please writh correctly", "ERROR!", MB_ICONEXCLAMATION);
+	}
+
 	return 0;
 }
