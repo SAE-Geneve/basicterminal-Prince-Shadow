@@ -1,7 +1,13 @@
 #include<iostream>
+#include <windows.h>
+#include<string>
 
-int main (/*int ac, char** av*/)
+int main(/*int ac, char** av*/)
 {
+	float valueA;
+	float valueB;
+	int action;
+	float result;
 	/*int ecrit;
 	//this is how you can output something ont the console !
 	std::cout << "Hello world!";
@@ -31,6 +37,61 @@ int main (/*int ac, char** av*/)
 	std::cout << c << "\n";
 	return c;*/
 
+	std::cout << "Hello, please write the first number.\n";
+	std::cin >> valueA;
+	std::cout << "1 for Add, 2 for Subtract, 3 for Multiply or 4 for Divide.\n";
+	std::cin >> action;
+	std::cout << "please write the second number. \n";
+	std::cin >> valueB;
 
-
+	if (action == 1)
+	{
+		result = valueA + valueB;
+		std::cout << "the addition is " << result << ".\n";
+	}
+	else if (action == 2)
+	{
+		result = valueA - valueB;
+		std::cout << "the subtraction is " << result << ".\n";
+	}
+	else if (action == 3)
+	{
+		result = valueA * valueB;
+		std::cout << "the multiplication is " << result << ".\n";
+	}
+	else if (action == 4)
+	{
+		result = valueA / valueB;
+		std::cout << "the division is " << result << ".\n";
+	}
+	else
+	{
+		MessageBox(nullptr, "Wrong number fonction", "ERROR!", MB_ICONEXCLAMATION);
+	}
+	// std::string greeting = "Hello world";
+	// std::string name = "john";
+	// std::string full_text = greeting + " " + name;
+	// std::cout << full_text;
+	// std::cout << greeting.append(" ").append(name);
+	// std::cout << full_text;
+	// const int value = 5;
+	// std::string apple_count = std::to_string(value) + " apples";
+	// std::cout << "you have " << apple_count << "\n";
+	// std::string txt = "here is something";
+	// std::cout << "size: " << std::to_string(txt.length()) << "\n";
+	// std::cout << "size: " << std::to_string(txt.size());
+	// std::string txt = "here is something";
+	// char value = txt[3];
+	// std::cout << "the character is [" << value << "].\n";
+	// txt[0] = 'J';
+	// std::cout << txt;
+	std::cout << "Enter your full name.\n";
+	std::string first_name;
+	std::cin >> first_name;
+	std::cout << first_name;
+	// std::cout << "Enter your last_name.";
+	std::string name;
+	std::getline(std::cin, name);
+	std::cout << name;
+	return 0;
 }
